@@ -45,6 +45,7 @@ Si un trabajador adecuado está disponible, se le asigna la tarea usando setWork
 El tiempo restante se reduce progresivamente mediante Update().
 Cuando el tiempo restante llega a 0, la tarea se marca como completada mediante isCompleted().
 
+
 -Worker
 La clase Worker gestiona a los trabajadores en un entorno donde:
 Los trabajadores tienen roles específicos (CEO, AGENCY, GENERIC).
@@ -52,6 +53,8 @@ Cada trabajador puede manejar una tarea a la vez.
 Se verifica que la tarea asignada sea apropiada para el tipo de trabajador.
 Proporciona mecanismos para monitorear y actualizar el progreso de las tareas asignadas.
 Esta implementación asegura que los trabajadores operen dentro de las restricciones de roles y que las tareas se asignen y completen correctamente.
+
+
 ---Clase Task
 Atributos principales:
 Nombre de la tarea: std::string name define el identificador único de la tarea.
@@ -60,6 +63,8 @@ Tiempo restante: int remaining_time controla cuánto tiempo queda para finalizar
 Trabajador asignado: Worker* assigned_worker señala al trabajador que está realizando la tarea.
 Tipo de trabajador requerido: WorkerType worker_type define qué tipo de trabajador puede realizar la tarea.
 Dependencias: std::vector<std::shared_ptr<Task>> dependencies almacena las tareas que deben completarse antes de iniciar esta tarea.
+
+
 ---Clase Worker
 Atributos principales:
 Tipo del trabajador: WorkerType type es una propiedad fija que define el rol del trabajador (CEO, AGENCY, GENERIC).
