@@ -52,3 +52,37 @@ Cada trabajador puede manejar una tarea a la vez.
 Se verifica que la tarea asignada sea apropiada para el tipo de trabajador.
 Proporciona mecanismos para monitorear y actualizar el progreso de las tareas asignadas.
 Esta implementación asegura que los trabajadores operen dentro de las restricciones de roles y que las tareas se asignen y completen correctamente.
+---Clase Task
+Atributos principales:
+Nombre de la tarea: std::string name define el identificador único de la tarea.
+Duración total: int duration especifica el tiempo necesario para completar la tarea.
+Tiempo restante: int remaining_time controla cuánto tiempo queda para finalizar la tarea.
+Trabajador asignado: Worker* assigned_worker señala al trabajador que está realizando la tarea.
+Tipo de trabajador requerido: WorkerType worker_type define qué tipo de trabajador puede realizar la tarea.
+Dependencias: std::vector<std::shared_ptr<Task>> dependencies almacena las tareas que deben completarse antes de iniciar esta tarea.
+---Clase Worker
+Atributos principales:
+Tipo del trabajador: WorkerType type es una propiedad fija que define el rol del trabajador (CEO, AGENCY, GENERIC).
+Tarea actual: std::shared_ptr<Task> currentTask apunta a la tarea que el trabajador está ejecutando en un momento dado.
+Aceptación de tareas específicas: bool specific_task indica si el trabajador solo puede realizar tareas específicas o acepta cualquier tarea compatible con su tipo.
+Flujo de la Simulación
+Inicialización de tareas:
+Se crea un vector de tareas, incluyendo su configuración inicial como duración, dependencias, y el tipo de trabajador necesario.
+Definición de trabajadores:
+Un vector de trabajadores se configura con roles específicos, como CEO, AGENCY, o GENERIC, y se indica si aceptan tareas específicas.
+Simulación paso a paso:
+Se avanza minuto a minuto en el tiempo simulado.
+Las tareas pendientes se analizan para determinar si sus dependencias se han cumplido.
+Las tareas disponibles se asignan a trabajadores libres, respetando las restricciones de tipo de trabajador y dependencias.
+Los trabajadores progresan en sus tareas, y las tareas completadas liberan a los trabajadores.
+Reporte de resultados:
+Al finalizar, se imprimen los detalles de las tareas completadas, el tiempo total de la simulación y el rendimiento de los trabajadores.
+Este enfoque organiza de manera estructurada la ejecución y gestión de las tareas y trabajadores, optimizando el flujo de trabajo y asegurando que se respeten las dependencias y restricciones del sistema.
+
+
+
+
+
+
+
+
