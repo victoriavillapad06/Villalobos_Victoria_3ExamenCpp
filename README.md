@@ -83,7 +83,7 @@ Los trabajadores progresan en sus tareas, y las tareas completadas liberan a los
 Reporte de resultados:
 Al finalizar, se imprimen los detalles de las tareas completadas, el tiempo total de la simulación y el rendimiento de los trabajadores.
 Este enfoque organiza de manera estructurada la ejecución y gestión de las tareas y trabajadores, optimizando el flujo de trabajo y asegurando que se respeten las dependencias y restricciones del sistema.
-
+Fuente chatgpt
 
 
 
