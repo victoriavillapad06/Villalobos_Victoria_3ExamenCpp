@@ -7,12 +7,18 @@ Un nombre descriptivo (Task("Nombre", duración, ...)).
 Una duración en unidades de tiempo.
 Dependencias opcionales: tareas que deben completarse antes de que esta pueda comenzar.
 Tipo de trabajador requerido, si aplica.
+
+
+
 -Función algoritm
 Flujo General de la Simulación
 La lógica de la función algoritm() Esta función organiza la simulación para completar todas las tareas usando un conjunto de trabajadores.
 -Configurar los trabajadores y tareas:
 Se cargan los trabajadores con sus roles específicos.
 Se cargan las tareas predefinidas con sus dependencias.
+
+
+
 -Bucle principal:
 El programa iterará en un ciclo while hasta que todas las tareas sean completadas (allTasksCompleted = true).
 -Dentro del bucle:
